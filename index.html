@@ -409,10 +409,57 @@
         </div>
 
         <!-- 3D INTERACTIVE FLIGHT GLOBE -->
-        <div class="globe-container" id="globeContainer">
-          <canvas id="globe3dCanvas"></canvas>
-          <div class="globe-hint">✦ Kéo chuột để xoay quả cầu • Rê vào điểm bay</div>
-          <div class="globe-overlay-info" id="globeInfo"></div>
+        <div class="globe-wrapper">
+          <!-- City Quick Selection Pills Strip -->
+          <div class="globe-pills-bar" id="globePillsBar">
+            <button class="globe-pill active" data-city="hanoi" title="Gốc: Đại học Ngoại thương">
+              <span>🇻🇳</span> Hà Nội
+            </button>
+            <button class="globe-pill" data-city="tokyo" title="Tokyo: Waseda / Keio">
+              <span>🇯🇵</span> Tokyo
+            </button>
+            <button class="globe-pill" data-city="seoul" title="Seoul: Yonsei / SNU">
+              <span>🇰🇷</span> Seoul
+            </button>
+            <button class="globe-pill" data-city="london" title="London: LSE / Warwick">
+              <span>🇬🇧</span> London
+            </button>
+            <button class="globe-pill" data-city="paris" title="Paris: HEC / Sciences Po">
+              <span>🇫🇷</span> Paris
+            </button>
+            <button class="globe-pill" data-city="newyork" title="New York: Columbia / NYU">
+              <span>🇺🇸</span> New York
+            </button>
+            <button class="globe-pill" data-city="singapore" title="Singapore: NUS / SMU">
+              <span>🇸🇬</span> Singapore
+            </button>
+            <button class="globe-pill" data-city="sydney" title="Sydney: USYD / UNSW">
+              <span>🇦🇺</span> Sydney
+            </button>
+          </div>
+
+          <div class="globe-container" id="globeContainer">
+            <canvas id="globe3dCanvas"></canvas>
+
+            <!-- Live HUD Route Status -->
+            <div class="globe-hud-status" id="globeHudStatus">
+              <span class="globe-live-indicator"></span>
+              <span id="globeRouteLabel">8 Tuyến kết nối toàn cầu • Gốc: Hà Nội (FTU)</span>
+            </div>
+
+            <!-- On-canvas 3D Controls HUD -->
+            <div class="globe-controls-hud">
+              <button class="globe-ctrl-btn" id="globeZoomIn" title="Phóng to (+)">+</button>
+              <button class="globe-ctrl-btn" id="globeZoomOut" title="Thu nhỏ (−)">−</button>
+              <button class="globe-ctrl-btn" id="globeResetBtn" title="Về Hà Nội (FTU)">↺</button>
+              <button class="globe-ctrl-btn" id="globeSpinToggle" title="Tạm dừng / Tiếp tục xoay">⏸</button>
+            </div>
+            <!-- Hint -->
+            <div class="globe-hint">✦ Kéo xoay 3D • Lăn chuột phóng to • Bấm chọn điểm bay</div>
+
+            <!-- Hover Quick Tooltip -->
+            <div class="globe-overlay-info" id="globeInfo"></div>
+          </div>
         </div>
       </div>
 
@@ -626,13 +673,13 @@
               <p><b>Quốc tịch:</b> VIỆT NAM (VNM)</p>
               <p><b>Trường:</b> ĐH Ngoại thương (FTU)</p>
               <p><b>Chuyên ngành:</b> Kinh tế Quốc tế</p>
-              <p><b>Khóa:</b> K61 • 2024–2026</p>
+              <p><b>Khóa:</b> K63 • 2024–2028</p>
             </div>
           </div>
 
           <div class="passport-mrz">
             P&lt;VNMDUONG&lt;&lt;THUY&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;<br>
-            FTU2026018&lt;4VNM0405102F2605156&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;02
+            FTU2415410035&lt;4VNM0405102F2805156&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;02
           </div>
         </div>
 
@@ -646,7 +693,7 @@
             <div class="passport-stamp stamp-blue" data-stamp="ftu" title="Xem chi tiết con dấu">
               <span class="stamp-header">FTU IMMIGRATION</span>
               <div class="stamp-title">GPA 3.61<br>ACADEMIC</div>
-              <span class="stamp-date">★ 2024–2026</span>
+              <span class="stamp-date">★ K63 • 2024–2028</span>
             </div>
 
             <div class="passport-stamp stamp-gold" data-stamp="goglobal" title="Xem chi tiết con dấu">
@@ -696,17 +743,17 @@
         <div class="flight-number" style="justify-content: center;"><span>✈</span> Final Flight • My Story</div>
         <h2 class="final-title">From 2.50 to 3.61.<br>From FTU to the world.</h2>
         <p class="final-desc">
-          Tôi từng nghĩ đại học chỉ là câu chuyện về những con số trên bảng điểm. Sau ba năm tại FTU, tôi nhận ra điều ý nghĩa hơn cả nằm ở cách mình dám dấn thân vào từng cơ hội — học thêm một ngoại ngữ mới, thử thách bản thân với công việc Sales, cống hiến cho các hoạt động cộng đồng và tự tay kiến tạo dự án GoGlobal. Tôi muốn tiếp tục học hỏi, khám phá những nền văn hóa mới và biến mỗi trải nghiệm thành một bước tiến vững chắc trên hành trình vươn ra thế giới.
+          Tôi từng nghĩ đại học chỉ là câu chuyện về những con số trên bảng điểm. Trên hành trình tại FTU, tôi nhận ra điều ý nghĩa hơn cả nằm ở cách mình dám dấn thân vào từng cơ hội — học thêm một ngoại ngữ mới, thử thách bản thân với công việc Sales, cống hiến cho các hoạt động cộng đồng và tự tay kiến tạo dự án GoGlobal. Tôi muốn tiếp tục học hỏi, khám phá những nền văn hóa mới và biến mỗi trải nghiệm thành một bước tiến vững chắc trên hành trình vươn ra thế giới.
         </p>
 
         <div class="final-signature">Nguyễn Thuỳ Dương</div>
 
         <div class="contact-cards">
-          <a class="contact-pill" href="mailto:thuyduong.ftu@gmail.com">
-            <span>✉</span> thuyduong.ftu@gmail.com
+          <a class="contact-pill" href="mailto:k63.2415410035@ftu.edu.vn">
+            <span>✉</span> k63.2415410035@ftu.edu.vn
           </a>
           <div class="contact-pill">
-            <span>🎓</span> FTU Hanoi • International Economics
+            <span>🎓</span> FTU Hanoi • K63 International Economics
           </div>
           <div class="contact-pill">
             <span>🌏</span> Languages: VN • EN (6.5) • CN (HSK5)
@@ -783,7 +830,7 @@
         “Cảm ơn bạn rất nhiều vì đã dành thời gian đồng hành và dõi theo từng chặng bay trên hành trình của Thuỳ Dương. Tôi tin rằng mỗi cuộc gặp gỡ đều là một cơ duyên đáng quý. Nếu bạn đang tìm kiếm một người đồng hành nhiệt huyết, kỷ luật và ham học hỏi, tôi rất mong có cơ hội được trò chuyện cùng bạn!”
       </p>
       <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-        <a class="btn btn-primary" href="mailto:thuyduong.ftu@gmail.com?subject=Lời%20mời%20kết%20nối%20cà%20phê%20từ%20Tấm%20Vé%20Vàng">
+        <a class="btn btn-primary" href="mailto:k63.2415410035@ftu.edu.vn?subject=Lời%20mời%20kết%20nối%20cà%20phê%20từ%20Tấm%20Vé%20Vàng">
           ☕ Gửi lời nhắn hẹn cà phê
         </a>
         <button class="btn btn-secondary" id="closeGoldenTicketBtn">Đóng vé vàng</button>
