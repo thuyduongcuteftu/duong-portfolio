@@ -1,67 +1,10 @@
 /**
- * PASSPORT STAMPS, FIRST-CLASS CV MODAL & GOLDEN TICKET EASTER EGG
+ * PASSPORT STAMPS & GOLDEN TICKET EASTER EGG
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
-  // 1. FIRST-CLASS LUGGAGE TAG & CV MODAL
-  // ==========================================
-  const cvModal = document.getElementById('cvModal');
-  const openCvBtns = document.querySelectorAll('.open-cv-trigger');
-  const closeCvBtn = document.getElementById('closeCvBtn');
-  const printCvBtn = document.getElementById('printCvBtn');
-  const cvFilterBtns = document.querySelectorAll('.cv-filter-btn');
-  const cvItems = document.querySelectorAll('.cv-experience-item');
-
-  openCvBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      if (cvModal) {
-        cvModal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-    });
-  });
-
-  function closeCv() {
-    if (cvModal) {
-      cvModal.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-  }
-
-  if (closeCvBtn) closeCvBtn.addEventListener('click', closeCv);
-  if (cvModal) {
-    cvModal.addEventListener('click', (e) => {
-      if (e.target === cvModal) closeCv();
-    });
-  }
-
-  if (printCvBtn) {
-    printCvBtn.addEventListener('click', () => {
-      window.print();
-    });
-  }
-
-  // Filter skills/experience in CV Modal
-  cvFilterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      cvFilterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const category = btn.getAttribute('data-filter');
-
-      cvItems.forEach(item => {
-        if (category === 'all' || item.getAttribute('data-cat') === category) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
-        }
-      });
-    });
-  });
-
-  // ==========================================
-  // 2. DIGITAL PASSPORT VISA STAMPS INTERACTION
+  // 1. DIGITAL PASSPORT VISA STAMPS INTERACTION
   // ==========================================
   const stamps = document.querySelectorAll('.passport-stamp');
   const stampDetailModal = document.getElementById('stampDetailModal');
@@ -111,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================
-  // 3. GOLDEN TICKET EASTER EGG (SECRET PASS)
+  // 2. GOLDEN TICKET EASTER EGG (SECRET PASS)
   // ==========================================
   const goldenTicketModal = document.getElementById('goldenTicketModal');
   const goldenTicketTriggers = document.querySelectorAll('.golden-star-trigger');
@@ -140,10 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Keyboard Escape for all custom modals
+  // Keyboard Escape for custom modals
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      closeCv();
       if (stampDetailModal) stampDetailModal.classList.remove('active');
       if (goldenTicketModal) goldenTicketModal.classList.remove('active');
     }
