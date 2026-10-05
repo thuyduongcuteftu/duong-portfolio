@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#120c0b" />
+  <title>Nguyễn Thuỳ Dương — From FTU to the World</title>
+  <meta name="description" content="Cinematic portfolio của Nguyễn Thuỳ Dương — International Economics, Foreign Trade University." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#f6efe8;--muted:#bdb1a8;--bg:#0f0a09;--bg2:#19100e;--red:#d9272e;--gold:#f0bd66;--paper:#efe3d5;--line:rgba(255,255,255,.13)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden}
+    a{color:inherit}.grain{position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.14;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.22'/%3E%3C/svg%3E")}
+    .topbar{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:60;width:min(1100px,calc(100% - 28px));display:flex;align-items:center;justify-content:space-between;padding:11px 14px 11px 18px;border:1px solid var(--line);background:rgba(15,10,9,.62);backdrop-filter:blur(16px);border-radius:999px}
+    .brand{font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}.flight-pill{display:flex;align-items:center;gap:8px;font-size:12px}.ticket-count{background:var(--paper);color:#201614;padding:7px 11px;border-radius:999px;font-weight:700}.music-btn{border:1px solid var(--line);background:transparent;color:var(--ink);width:34px;height:34px;border-radius:50%;cursor:pointer}
+    .hero{min-height:100vh;position:relative;display:grid;place-items:end start;padding:120px max(6vw,28px) 62px;overflow:hidden}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,5,4,.93) 0%,rgba(8,5,4,.72) 36%,rgba(8,5,4,.16) 72%,rgba(8,5,4,.56) 100%),linear-gradient(0deg,#0f0a09 0%,transparent 42%);z-index:1}.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 28%;filter:saturate(.92) contrast(1.05)}
+    .hero-copy{position:relative;z-index:2;max-width:760px}.eyebrow{font-size:12px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}.hero h1{font-family:'Playfair Display',serif;font-size:clamp(54px,8vw,118px);line-height:.88;margin:0 0 20px;letter-spacing:-.04em}.hero h1 em{display:block;color:var(--gold);font-weight:600}.hero p{max-width:610px;font-size:clamp(16px,1.5vw,21px);line-height:1.65;color:#ded1c7}.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{border:0;border-radius:999px;padding:13px 19px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}.btn.primary{background:var(--red);color:#fff}.btn.secondary{background:rgba(255,255,255,.09);border:1px solid var(--line)}
+    .section{padding:100px max(6vw,28px);position:relative}.section.alt{background:#130d0c}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:42px}.kicker{color:var(--gold);text-transform:uppercase;letter-spacing:.2em;font-size:11px}.kicker.large{font-size:clamp(22px,3.4vw,48px);letter-spacing:.08em;font-weight:800;line-height:1.05;text-transform:none}.section h2{font-family:'Playfair Display',serif;font-size:clamp(38px,5vw,72px);line-height:1;margin:10px 0 0}.section-intro{max-width:520px;color:var(--muted);line-height:1.65}.flight-stop .kicker{font-size:clamp(24px,3.3vw,50px);letter-spacing:.06em;font-weight:800;line-height:1.06;text-transform:none}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.stat{border:1px solid var(--line);padding:26px;border-radius:22px;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.015))}.stat strong{display:block;font-family:'Playfair Display',serif;font-size:34px;color:var(--gold)}.stat span{color:var(--muted);font-size:13px}
+    .journey-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}.card{border:1px solid var(--line);border-radius:26px;padding:28px;background:rgba(255,255,255,.035)}.card h3{font-family:'Playfair Display',serif;font-size:30px;margin:0 0 12px}.card p,.card li{color:var(--muted);line-height:1.65}.card ul{padding-left:18px}.gpa{font-size:74px;font-family:'Playfair Display',serif;color:var(--gold);line-height:1}.arrow{font-size:28px;color:var(--red);margin:0 9px}
+    .photo-grid{display:grid;grid-template-columns:1.1fr .9fr .9fr;grid-template-rows:320px 320px;gap:12px}.photo{border-radius:22px;overflow:hidden;position:relative}.photo img{width:100%;height:100%;object-fit:cover;transition:.7s transform}.photo:hover img{transform:scale(1.045)}.photo:first-child{grid-row:1/3}.photo:nth-child(4){grid-column:2/4}.photo:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.36),transparent 42%)}
+    .go-global{display:grid;grid-template-columns:.9fr 1.1fr;gap:26px;align-items:center}.founder-label{margin-top:10px;font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(22px,2.4vw,34px);color:var(--gold);letter-spacing:.02em}.mission{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(28px,4vw,50px);line-height:1.15;color:var(--gold)}
+    .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.chip{padding:9px 12px;border-radius:999px;border:1px solid var(--line);font-size:12px;color:#d7cac0}.timeline{display:grid;gap:14px}.step{display:grid;grid-template-columns:58px 1fr;gap:18px;align-items:start}.step-num{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;border:1px solid var(--line);color:var(--gold);font-weight:700}.step h4{margin:3px 0 5px}.step p{margin:0;color:var(--muted);line-height:1.6}
+    .final{min-height:84vh;display:grid;place-items:center;text-align:center;padding:100px 24px;background:radial-gradient(circle at 50% 40%,rgba(217,39,46,.22),transparent 35%),#100a09}.final h2{font-family:'Playfair Display',serif;font-size:clamp(48px,7vw,94px);max-width:1000px;line-height:.98;margin:0}.final p{color:var(--muted);max-width:720px;line-height:1.7;margin:24px auto}.signature{font-family:'Playfair Display',serif;font-style:italic;color:var(--gold);font-size:24px}
+    .next-flight{display:flex;justify-content:center;margin-top:44px}.next-flight button{background:var(--paper);color:#211613;border:0;border-radius:999px;padding:14px 19px;font-weight:800;cursor:pointer}
+    .intro{position:fixed;inset:0;z-index:100;background:radial-gradient(circle at center,#2a1713 0%,#0e0908 65%);display:grid;place-items:center;transition:1s opacity,1s visibility}.intro.hidden{opacity:0;visibility:hidden}.intro-inner{text-align:center;position:relative;width:min(760px,92vw)}.intro h2{font-family:'Playfair Display',serif;font-size:clamp(38px,6vw,74px);margin:0 0 12px}.intro p{color:var(--muted);margin:0 0 28px}.boarding-pass{margin:0 auto 24px;width:min(530px,90vw);display:grid;grid-template-columns:1fr 132px;background:var(--paper);color:#211613;border-radius:20px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.35);transform:rotate(-1.5deg)}.pass-main{padding:24px;text-align:left}.pass-main small,.pass-side small{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:#6b5d55}.pass-main strong{display:block;font-family:'Playfair Display',serif;font-size:24px;margin-top:6px}.route{display:flex;justify-content:space-between;align-items:center;margin-top:18px;font-size:12px}.pass-side{border-left:2px dashed rgba(0,0,0,.22);padding:20px;display:grid;place-items:center}.pass-side b{font-size:34px;color:var(--red)}
+    .fairy{position:absolute;font-size:42px;filter:drop-shadow(0 0 14px rgba(240,189,102,.35));animation:float 2.2s ease-in-out infinite}.f1{left:3%;top:20%}.f2{right:4%;top:24%;animation-delay:.35s}.f3{left:11%;bottom:12%;animation-delay:.7s}.f4{right:12%;bottom:10%;animation-delay:1s}@keyframes float{50%{transform:translateY(-14px) rotate(6deg)}}
+    .intro.fly .f1{animation:fly1 1.2s ease-in forwards}.intro.fly .f2{animation:fly2 1.2s ease-in forwards}.intro.fly .f3{animation:fly3 1.2s ease-in forwards}.intro.fly .f4{animation:fly4 1.2s ease-in forwards}@keyframes fly1{to{transform:translate(-45vw,-45vh) scale(.3);opacity:0}}@keyframes fly2{to{transform:translate(45vw,-45vh) scale(.3);opacity:0}}@keyframes fly3{to{transform:translate(-45vw,45vh) scale(.3);opacity:0}}@keyframes fly4{to{transform:translate(45vw,45vh) scale(.3);opacity:0}}
+    .ticket-wind-layer{position:fixed;inset:0;z-index:94;pointer-events:none;overflow:hidden}.flying-ticket{position:absolute;width:88px;height:40px;border-radius:7px;background:linear-gradient(135deg,#f7ead8,#dfc7a7);color:#7d251f;border:1px solid rgba(91,47,35,.25);box-shadow:0 8px 24px rgba(0,0,0,.22);font:700 8px/1.1 'DM Sans',sans-serif;letter-spacing:.08em;text-transform:uppercase;display:grid;place-items:center;opacity:0;transform-origin:center;will-change:transform,opacity}.flying-ticket:before{content:'BOARDING PASS';position:absolute;left:8px;top:6px;font-size:6px;letter-spacing:.12em;color:#6e5c50}.flying-ticket:after{content:'✈  FTU → WORLD';font-size:8px;color:#b12b2f}.flying-ticket i{position:absolute;right:13px;top:0;bottom:0;border-left:1px dashed rgba(91,47,35,.35)}.flying-ticket.wind{animation:ticketWind var(--dur,6.2s) ease-in-out forwards;animation-delay:var(--delay,0s)}@keyframes ticketWind{0%{opacity:0;transform:translate3d(var(--x0,10vw),var(--y0,-18vh),0) rotate(var(--r0,-18deg)) scale(.72)}8%{opacity:.92}24%{transform:translate3d(var(--x1,24vw),var(--y1,18vh),0) rotate(var(--r1,20deg)) scale(.92)}48%{transform:translate3d(var(--x2,8vw),var(--y2,46vh),0) rotate(var(--r2,-22deg)) scale(.84)}72%{transform:translate3d(var(--x3,30vw),var(--y3,76vh),0) rotate(var(--r3,28deg)) scale(.9)}100%{opacity:0;transform:translate3d(var(--x4,18vw),var(--y4,118vh),0) rotate(var(--r4,-34deg)) scale(.7)}}
+    .ticket-gust{position:absolute;inset:0;pointer-events:none;z-index:2}.ticket-gust .flying-ticket{filter:drop-shadow(0 12px 14px rgba(0,0,0,.25))}
+    .flight-transition{position:fixed;inset:0;z-index:95;display:grid;place-items:center;background:radial-gradient(circle at 50% 48%,#28384a 0%,#101821 45%,#070b10 100%);opacity:0;visibility:hidden;transition:.25s ease;overflow:hidden}.flight-transition.active{opacity:1;visibility:visible}.flight-sky{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.06),transparent 45%),radial-gradient(circle at 20% 25%,rgba(240,189,102,.12),transparent 24%)}.cloud{position:absolute;font-size:clamp(56px,8vw,120px);opacity:.18;filter:blur(.3px)}.c1{left:-10%;top:18%;animation:cloudMove 3.4s linear infinite}.c2{right:-8%;bottom:18%;animation:cloudMove2 4s linear infinite}.c3{left:18%;bottom:-3%;animation:cloudMove 4.8s linear infinite}@keyframes cloudMove{from{transform:translateX(-12vw)}to{transform:translateX(28vw)}}@keyframes cloudMove2{from{transform:translateX(15vw)}to{transform:translateX(-30vw)}}.plane-wrap{position:relative;z-index:2;width:min(760px,88vw);height:230px}.route-line{position:absolute;left:8%;right:8%;top:50%;height:2px;border-top:2px dashed rgba(255,255,255,.28)}.route-line:after{content:'';position:absolute;inset:-16px 0 auto 0;height:34px;border-radius:50%;border-top:1px solid rgba(240,189,102,.25);transform:rotate(-4deg)}.plane{position:absolute;left:-15%;top:37%;font-size:68px;filter:drop-shadow(0 12px 20px rgba(0,0,0,.35));transform:rotate(8deg)}.flight-transition.active .plane{animation:planeFly 1.45s cubic-bezier(.2,.8,.2,1) forwards}@keyframes planeFly{0%{left:-15%;top:52%;transform:rotate(8deg) scale(.85)}45%{top:28%;transform:rotate(-4deg) scale(1.05)}100%{left:105%;top:38%;transform:rotate(5deg) scale(.82)}}.flight-copy{position:absolute;z-index:3;text-align:center;top:58%;left:50%;transform:translate(-50%,-50%);width:90%}.flight-copy small{display:block;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-size:10px;margin-bottom:10px}.flight-copy strong{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,52px)}.flight-copy span{display:block;color:#c3ced8;margin-top:9px;font-size:13px}.music-status{position:fixed;left:22px;bottom:22px;z-index:81;background:rgba(15,10,9,.78);border:1px solid var(--line);backdrop-filter:blur(12px);padding:10px 13px;border-radius:999px;font-size:12px;color:#d9cec6;opacity:0;transform:translateY(10px);transition:.25s}.music-status.show{opacity:1;transform:none}
+    .toast{position:fixed;right:22px;bottom:22px;z-index:80;background:var(--paper);color:#211613;padding:12px 16px;border-radius:14px;font-weight:700;transform:translateY(20px);opacity:0;transition:.3s}.toast.show{transform:none;opacity:1}
+    @media(max-width:800px){.stats{grid-template-columns:1fr 1fr}.journey-grid,.go-global{grid-template-columns:1fr}.photo-grid{grid-template-columns:1fr 1fr;grid-template-rows:300px 240px 240px}.photo:first-child{grid-row:auto;grid-column:1/3}.photo:nth-child(4){grid-column:auto}.section-head{display:block}.section-intro{margin-top:18px}.hero{padding-bottom:46px}.topbar{top:10px}.brand{font-size:10px}}
+    @media(max-width:520px){.stats{grid-template-columns:1fr 1fr}.photo-grid{display:grid;grid-template-columns:1fr;grid-template-rows:repeat(5,320px)}.photo:first-child,.photo:nth-child(4){grid-column:auto}.boarding-pass{grid-template-columns:1fr 100px}.fairy{font-size:34px}.hero h1{font-size:58px}}
+  </style>
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="intro" id="intro">
+    <div class="intro-inner">
+      <div class="fairy f1">🧚‍♀️</div><div class="fairy f2">🧚‍♀️</div><div class="fairy f3">🧚‍♀️</div><div class="fairy f4">🧚‍♀️</div>
+      <div class="boarding-pass">
+        <div class="pass-main"><small>Boarding pass • personal journey</small><strong>Nguyễn Thuỳ Dương</strong><div class="route"><span>FTU • HANOI</span><span>✈</span><span>THE WORLD</span></div></div>
+        <div class="pass-side"><small>Tickets</small><b>55</b><small>Ready</small></div>
+      </div>
+      <h2>4 nàng tiên đã mang tới 55 tấm vé.</h2>
+      <p>Mỗi chặng đi qua sẽ dùng 1 vé. Bật hành trình để bắt đầu.</p>
+      <button class="btn primary" id="startBtn">✦ Bắt đầu hành trình</button>
+    </div>
+  </div>
+
+  <audio id="bgMusic" src="assets/background-music.mp3" preload="auto" loop></audio>
+  <div class="ticket-wind-layer" id="ticketWindLayer" aria-hidden="true"></div>
+  <header class="topbar"><div class="brand">Thuỳ Dương • Portfolio Journey</div><div class="flight-pill"><span class="ticket-count">✈ <span id="tickets">55</span> vé</span><button class="music-btn" id="musicBtn" title="Bật/tắt nhạc">♫</button></div></header>
+
+  <main>
+    <section class="hero" id="home">
+      <img src="assets/duong-flag.png" alt="Nguyễn Thuỳ Dương với lá cờ Việt Nam" class="hero-bg" />
+      <div class="hero-copy"><div class="eyebrow">International Economics • Foreign Trade University</div><h1>From FTU <em>to the world.</em></h1><p>Tôi là Nguyễn Thuỳ Dương — sinh viên Kinh tế Quốc tế, yêu những cơ hội đưa mình ra khỏi vùng quen thuộc: học tập, ngoại ngữ, truyền thông, du lịch và các dự án cộng đồng.</p><div class="cta-row"><a class="btn primary" href="#education">Board the journey ↓</a><a class="btn secondary" href="#gallery">View Hanoi moments</a></div></div>
+    </section>
+
+    <section class="section alt flight-stop" id="education" data-stop="Education">
+      <div class="section-head"><div><div class="kicker large">Flight 01 • Education</div><h2>A comeback built on discipline.</h2></div><p class="section-intro">Một dấu mốc đáng nhớ nhất của tôi không phải là một con số hoàn hảo — mà là quá trình tự thay đổi cách học, cách quản lý thời gian và cách duy trì kỷ luật.</p></div>
+      <div class="stats"><div class="stat"><strong>3.61</strong><span>GPA / 4.00</span></div><div class="stat"><strong>6.5</strong><span>IELTS</span></div><div class="stat"><strong>HSK 5</strong><span>Chinese proficiency</span></div><div class="stat"><strong>108</strong><span>HSA score</span></div></div>
+      <div class="journey-grid" style="margin-top:18px"><div class="card"><div><span class="gpa">2.50</span><span class="arrow">→</span><span class="gpa">3.61</span></div><h3>Foreign Trade University</h3><p>International Economics • 2024 – Present. Sinh viên năm 3, lớp Anh 03 Tiêu chuẩn.</p></div><div class="card"><h3>THPT Chu Văn An – Yên Bái</h3><ul><li>Được tuyển thẳng vào THPT nhờ giải Vật lý.</li><li>108 điểm HSA – Kỳ thi Đánh giá năng lực.</li><li>Sử dụng kết quả HSA để xét tuyển đại học.</li><li>Xây dựng nền tảng tốt về ngoại ngữ, tư duy logic và các môn xã hội.</li></ul></div></div>
+      <div class="next-flight"><button data-next="experience">Dùng 1 vé • Bay tới Experience →</button></div>
+    </section>
+
+    <section class="section flight-stop" id="experience" data-stop="Experience">
+      <div class="section-head"><div><div class="kicker">Flight 02 • Experience</div><h2>Learn by doing.</h2></div><p class="section-intro">Sales giúp tôi học cách lắng nghe con người. Content giúp tôi học cách kể một câu chuyện. Cả hai cùng dạy tôi biến ý tưởng thành kết quả cụ thể.</p></div>
+      <div class="journey-grid"><div class="card"><h3>Sales Executive / Assistant</h3><ul><li>Tư vấn và hỗ trợ khách hàng.</li><li>Chủ động tiếp cận, duy trì tương tác.</li><li>Theo dõi khách hàng và kết quả bán hàng bằng Excel.</li><li>Làm việc theo mục tiêu doanh số và deadline.</li></ul></div><div class="card"><h3>Content Creator / Social Media</h3><ul><li>Lên ý tưởng nội dung theo chủ đề và nhóm đối tượng.</li><li>Thiết kế hình ảnh bằng Canva, video ngắn bằng CapCut.</li><li>Kết hợp content • design • video • presentation.</li><li>Phát triển tư duy truyền thông đa định dạng.</li></ul></div></div>
+      <div class="next-flight"><button data-next="goglobal">Dùng 1 vé • Bay tới GoGlobal →</button></div>
+    </section>
+
+    <section class="section alt flight-stop" id="goglobal" data-stop="GoGlobal">
+      <div class="go-global"><div><div class="kicker">Flight 03 • My Project</div><div class="founder-label">Founder</div><h2>GoGlobal — FTU Brings You to the World</h2><p class="mission">“Making international opportunities easier to find, understand and reach.”</p></div><div class="card"><h3>What I build</h3><ul><li>Tổng hợp chương trình trao đổi sinh viên và trường đối tác.</li><li>Hệ thống hóa yêu cầu hồ sơ, ngoại ngữ và CV.</li><li>Xây dựng nội dung hướng dẫn tìm kiếm cơ hội quốc tế.</li><li>Thiết kế website và hình ảnh nhận diện dự án.</li><li>Kết nối sinh viên có cùng định hướng học tập và trải nghiệm quốc tế.</li></ul><div class="chips"><span class="chip">International Exchange</span><span class="chip">Student Community</span><span class="chip">Web Design</span><span class="chip">Content Strategy</span></div></div></div>
+      <div class="next-flight"><button data-next="community">Dùng 1 vé • Bay tới Community →</button></div>
+    </section>
+
+    <section class="section flight-stop" id="community" data-stop="Community">
+      <div class="section-head"><div><div class="kicker">Flight 04 • Community</div><h2>Show up. Help out. Grow.</h2></div><p class="section-intro">Tôi muốn những trải nghiệm mình có không chỉ làm đầy CV, mà còn giúp mình hiểu cách làm việc với cộng đồng và tạo ra giá trị cho người khác.</p></div>
+      <div class="timeline"><div class="step"><div class="step-num">01</div><div><h4>“Em tới trường” Volunteer Project</h4><p>Outstanding Participant • hỗ trợ chuẩn bị, đóng gói, phân phối quà học tập; tham gia truyền thông và kêu gọi hỗ trợ.</p></div></div><div class="step"><div class="step-num">02</div><div><h4>Event Support — EACC</h4><p>Hỗ trợ Đại hội Đại biểu Phụ nữ toàn quốc lần thứ XIV: tổ chức, hậu cần, hướng dẫn người tham dự và phối hợp vận hành sự kiện.</p></div></div></div>
+      <div class="next-flight"><button data-next="skills">Dùng 1 vé • Bay tới Digital Skills →</button></div>
+    </section>
+
+
+    <section class="section flight-stop" id="skills" data-stop="Digital Skills">
+      <div class="section-head"><div><div class="kicker">Flight 05 • Digital Skills</div><h2>Digital skills for ideas, data & storytelling.</h2></div><p class="section-intro">Tôi kết hợp công cụ văn phòng, sáng tạo nội dung và kỹ năng xử lý dữ liệu để biến ý tưởng thành sản phẩm rõ ràng, trực quan và có thể sử dụng trong thực tế.</p></div>
+      <div class="journey-grid"><div class="card"><h3>Microsoft Office</h3><ul><li>Microsoft Word — Advanced</li><li>Microsoft Excel — Advanced</li><li>PowerPoint — Advanced</li></ul></div><div class="card"><h3>Creative</h3><ul><li>Canva — Advanced</li><li>CapCut — Advanced</li><li>Presentation Design</li><li>Social Media Content</li><li>Video Editing</li></ul></div></div>
+      <div class="journey-grid" style="margin-top:18px"><div class="card"><h3>Data & Productivity</h3><ul><li>Excel Data Analysis</li><li>Basic Python</li><li>Pandas</li><li>Data Cleaning</li><li>Data Visualization</li><li>AI-assisted productivity</li></ul></div><div class="card"><h3>Languages & people skills</h3><div class="chips"><span class="chip">Vietnamese — Native</span><span class="chip">English — IELTS 6.5</span><span class="chip">Chinese — HSK 5</span><span class="chip">Communication</span><span class="chip">Teamwork</span><span class="chip">Problem Solving</span><span class="chip">Presentation</span><span class="chip">Adaptability</span></div></div></div>
+      <div class="next-flight"><button data-next="gallery">Dùng 1 vé • Bay tới Hanoi in frames →</button></div>
+    </section>
+
+
+    <section class="section alt flight-stop" id="gallery" data-stop="Hanoi in frames">
+      <div class="section-head"><div><div class="kicker">Flight 06 • Hanoi in frames</div><h2>Where the journey begins.</h2></div><p class="section-intro">Những khung hình từ Hà Nội — nơi tôi học, làm việc, khám phá và bắt đầu mơ về những hành trình xa hơn.</p></div>
+      <div class="photo-grid"><div class="photo"><img src="assets/duong-cyclo.png" alt="Thuỳ Dương trên xích lô Hà Nội"></div><div class="photo"><img src="assets/duong-market.png" alt="Thuỳ Dương tại chợ Hà Nội"></div><div class="photo"><img src="assets/duong-oldquarter.png" alt="Thuỳ Dương tại phố cổ Hà Nội"></div><div class="photo"><img src="assets/duong-dessert.png" alt="Thuỳ Dương tại quán hàng Hà Nội"></div><div class="photo"><img src="assets/duong-flag.png" alt="Thuỳ Dương với cờ Việt Nam"></div></div>
+      <div class="next-flight"><button data-next="story">Dùng 1 vé • Chặng cuối →</button></div>
+    </section>
+
+    <section class="final flight-stop" id="story" data-stop="My Story"><div><div class="kicker">Final flight • My Story</div><h2>From 2.5 to 3.61.<br>From FTU to the world.</h2><p>Tôi từng nghĩ đại học chỉ là câu chuyện về điểm số. Sau ba năm tại FTU, tôi nhận ra điều quan trọng hơn nằm ở cách mình sử dụng những cơ hội mình có — học ngoại ngữ, thử sức với Sales, tham gia hoạt động cộng đồng và tự xây dựng GoGlobal. Tôi muốn tiếp tục học hỏi, khám phá những nền văn hóa mới và biến mỗi trải nghiệm thành một bước tiến trên hành trình của mình.</p><div class="signature">Nguyễn Thuỳ Dương</div></div></section>
+  </main>
+  <div class="flight-transition" id="flightTransition" aria-hidden="true">
+    <div class="flight-sky"></div>
+    <div class="ticket-gust" id="ticketGust" aria-hidden="true"></div>
+    <div class="cloud c1">☁️</div><div class="cloud c2">☁️</div><div class="cloud c3">☁️</div>
+    <div class="plane-wrap"><div class="route-line"></div><div class="plane">✈️</div></div>
+    <div class="flight-copy"><small>Now boarding</small><strong id="flightDestination">Next destination</strong><span>1 ticket used • cinematic flight in progress</span></div>
+  </div>
+  <div class="music-status" id="musicStatus">♫ Nhạc nền đang phát</div>
+  <div class="toast" id="toast">✈ Đã dùng 1 vé</div>
+
+<script>
+  let tickets = 55, musicOn = true;
+  const ticketEl = document.getElementById('tickets');
+  const toast = document.getElementById('toast');
+  const intro = document.getElementById('intro');
+  const transition = document.getElementById('flightTransition');
+  const destinationEl = document.getElementById('flightDestination');
+  const musicBtn = document.getElementById('musicBtn');
+  const musicStatus = document.getElementById('musicStatus');
+  const bgMusic = document.getElementById('bgMusic');
+  const ticketWindLayer = document.getElementById('ticketWindLayer');
+  const ticketGust = document.getElementById('ticketGust');
+
+  bgMusic.volume = .42;
+
+  function showMusicStatus(text){
+    musicStatus.textContent = text;
+    musicStatus.classList.add('show');
+    clearTimeout(showMusicStatus.t);
+    showMusicStatus.t=setTimeout(()=>musicStatus.classList.remove('show'),2300);
+  }
+  async function startMusic(){
+    musicOn = true; musicBtn.textContent='♫';
+    try{
+      bgMusic.currentTime = 0;
+      await bgMusic.play();
+      showMusicStatus('♫ Đi Đến Nơi Có Gió đang phát');
+    }catch(e){
+      showMusicStatus('⚠ Bấm ♫ để bật nhạc');
+    }
+  }
+  function pauseMusic(){ bgMusic.pause(); }
+
+  function makeFlyingTicket(container, intense=false){
+    const el=document.createElement('div');
+    el.className='flying-ticket wind';
+    el.innerHTML='<i></i>';
+
+    // Vé rơi từ trên xuống như lá bị gió cuốn: luôn đi xuống, nhưng lượn trái-phải.
+    const x0 = -4 + Math.random()*108;
+    const sway1 = -18 + Math.random()*36;
+    const sway2 = -22 + Math.random()*44;
+    const sway3 = -18 + Math.random()*36;
+    const sway4 = -12 + Math.random()*24;
+    const clamp = v => Math.max(-12, Math.min(112, v));
+
+    el.style.setProperty('--x0',`${x0}vw`);
+    el.style.setProperty('--y0',`${-14-Math.random()*24}vh`);
+    el.style.setProperty('--x1',`${clamp(x0+sway1)}vw`);
+    el.style.setProperty('--y1',`${12+Math.random()*14}vh`);
+    el.style.setProperty('--x2',`${clamp(x0+sway2)}vw`);
+    el.style.setProperty('--y2',`${38+Math.random()*16}vh`);
+    el.style.setProperty('--x3',`${clamp(x0+sway3)}vw`);
+    el.style.setProperty('--y3',`${67+Math.random()*16}vh`);
+    el.style.setProperty('--x4',`${clamp(x0+sway4)}vw`);
+    el.style.setProperty('--y4',`${112+Math.random()*20}vh`);
+
+    el.style.setProperty('--r0',`${-35+Math.random()*70}deg`);
+    el.style.setProperty('--r1',`${-25+Math.random()*70}deg`);
+    el.style.setProperty('--r2',`${-45+Math.random()*90}deg`);
+    el.style.setProperty('--r3',`${-30+Math.random()*80}deg`);
+    el.style.setProperty('--r4',`${-50+Math.random()*100}deg`);
+    el.style.setProperty('--dur',`${intense ? 3.8+Math.random()*2.0 : 6.2+Math.random()*3.2}s`);
+    el.style.setProperty('--delay',`${Math.random()*(intense?.7:1.5)}s`);
+
+    const scale=.62+Math.random()*.62;
+    el.style.width=`${82*scale}px`;
+    el.style.height=`${37*scale}px`;
+    container.appendChild(el);
+    setTimeout(()=>el.remove(),11000);
+  }
+  function ticketBurst(count=34){ for(let i=0;i<count;i++) makeFlyingTicket(ticketGust,true); }
+  document.getElementById('startBtn').addEventListener('click',()=>{
+    startMusic();
+    intro.classList.add('fly');
+    setTimeout(()=>intro.classList.add('hidden'),850);
+  });
+
+  musicBtn.addEventListener('click',async()=>{
+    musicOn = !musicOn;
+    if(musicOn){
+      musicBtn.textContent='♫';
+      try{ await bgMusic.play(); showMusicStatus('♫ Đi Đến Nơi Có Gió đang phát'); }
+      catch(e){ showMusicStatus('⚠ Trình duyệt đang chặn âm thanh'); }
+    } else {
+      musicBtn.textContent='×'; pauseMusic(); showMusicStatus('Nhạc nền đã tắt');
+    }
+  });
+
+  function useTicket(label){
+    if(tickets <= 0) return false;
+    tickets--; ticketEl.textContent = tickets;
+    toast.textContent = `✈ ${label}: -1 vé • còn ${tickets}`;
+    toast.classList.add('show'); setTimeout(()=>toast.classList.remove('show'),1800);
+    return true;
+  }
+
+  function flyTo(target){
+    destinationEl.textContent = target.dataset.stop || 'Next destination';
+    ticketGust.innerHTML='';
+    transition.classList.remove('active');
+    void transition.offsetWidth;
+    transition.classList.add('active');
+    ticketBurst(40);
+    setTimeout(()=>target.scrollIntoView({behavior:'auto', block:'start'}), 780);
+    setTimeout(()=>transition.classList.remove('active'), 1650);
+  }
+
+  document.querySelectorAll('[data-next]').forEach(btn=>btn.addEventListener('click',()=>{
+    const target = document.getElementById(btn.dataset.next);
+    if(useTicket(target.dataset.stop || 'Next flight')) flyTo(target);
+  }));
+</script>
+</body>
+</html>
